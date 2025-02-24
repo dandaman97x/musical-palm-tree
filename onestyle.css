@@ -128,14 +128,15 @@ background-size: cover;
 /* USA*/
 /* HOMELAND */
 .dhsheader{
-background-image: url("USA/FED/DHS/CBP/FO/CBPStripe.png");
+background-image: url("USA/FED/DHS/DHSStripe.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
 }
 /* CUSTOMS */
 .cbpheader{
-background-image: url("USA/FED/DHS/CBP/FO/CBPStripe.png");
+/* background-image: url("USA/FED/DHS/CBP/FO/CBPStripe.png"); */
+background-image: url("USA/FED/DHS/CBP/FO/CBPStripe2.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
@@ -143,7 +144,8 @@ background-size: cover;
 /* width: 50%; */
 }
 .usbpheader{
-background-image: url("USA/FED/DHS/CBP/USBP/USBPStripe.png");
+/* background-image: url("USA/FED/DHS/CBP/USBP/USBPStripe.png"); */
+background-image: url("USA/FED/DHS/CBP/USBP/USBPStripe2.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
@@ -151,7 +153,8 @@ background-size: cover;
 /* width: 50%; */
 }
 .amoheader{
-background-image: url("USA/FED/DHS/CBP/Air/AMOStripe.png");
+/* background-image: url("USA/FED/DHS/CBP/Air/AMOStripe.png"); */
+background-image: url("USA/FED/DHS/CBP/Air/AMOStripe2.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
