@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../style.css">
+    <title>Transportation</title>
+	<p ALIGN=LEFT ><a href="CAN.html">BACK</a></p>
+	<!-- <link rel="icon" type="image/x-icon" href="../../../CAN/Transit/Train.ico"> -->
+  </head>
+  <body>
+    <h1><img src="Transport/LOGO.png" height="150"></h1><h2>Transportation Agencies</h2>
+	
+	</br></br></br>
+
+	<div class="row">		 
+		<div class="column">
+			<a href="Transport/Air.html">
+			<!-- <img src="Transport/Air/YYZ/FES/BADGE.png" height="250"> -->
+			<img id="air" src="" height="250">
+			<br>Airport Emergency Services</a><br><br>
+		</div>
+		
+		<div class="column">
+			<a href="Transport/Rail.html">
+			<!-- <img src="Transport/Rail/CP-CA/CPKC2.png" height="250"> -->
+			<img id="rail" src="" height="250">
+			<br>Railway Police</a><br><br>
+		</div>
+		
+		<div class="column">
+			<a href="Transport/Transit.html">
+			<!-- <img src="Transport/Transit/YVR/BADGE.png" height="250"> -->
+			<img id="transit" src="" height="250">
+			<br>Transit Enforcement Agencies</a><br><br>
+		
+
+				<script>
+					function getRandomImage(folder, images) {
+					if (images.length === 0) {
+					console.error(`No images found in folder: ${folder}`);
+					return null;
+					}
+
+					const randomIndex = Math.floor(Math.random() * images.length);
+					return folder + '/' + images[randomIndex];
+					}
+
+
+					document.addEventListener('DOMContentLoaded', function() {
+					const imageConfigurations = [
+					{ id: 'air', folder: 'Transport/Air', 
+					images: [
+					'YYZ/FES/BADGE.png',
+					'YVR/BADGE.png',
+					'YYC/BADGE.png',
+					'YEG/BADGE.png',
+					'YHM/BADGE.png',
+					'YTZ/BADGE.png',
+					] },
+					
+					{ id: 'rail', folder: 'Transport/Rail', 
+					images: [
+					'CN-CA/BADGE.png',
+					<!-- 'CP-CA/BADGE_CAN.png', -->
+					'CP-CA/BADGE.png',
+					'CP-CA/CPKC2.png',
+					'VIA/BADGE.png',
+					] },
+					
+					{ id: 'transit', folder: 'Transport/Transit', 
+					images: [
+					'MVTP/BADGE2.png',
+					'YRT/BADGE.png',
+					'GOT/BADGE.png',
+					'TTC/BADGE.png',
+					'OC/BADGE.png',
+					'CT/BADGE.png',
+					'ET/BADGE.png',
+					] }
+					
+					];
+
+					for (let i = 0; i < imageConfigurations.length; i++) {
+					const config = imageConfigurations[i];
+					const imgElement = document.getElementById(config.id);
+
+					if (imgElement) {
+					const imageUrl = getRandomImage(config.folder, config.images);
+					if (imageUrl) {
+					imgElement.src = imageUrl;
+					} else {
+					console.log(`Could not load image for ${config.id}`);
+					}
+					} else {
+					console.error(`Element with id '${config.id}' not found.`);
+					}
+					}
+					});
+				</script>
+
+		</div>
+	</div>
+	
+</body>
+</html>

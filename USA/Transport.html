@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../style.css">
+    <title>US Transportation</title>
+	<p ALIGN=LEFT ><a href="USA.html">BACK</a></p>
+  </head>
+  <body>
+    <h1><img src="Transport/DOT.png" height="150"></h1><h2>Transportation Agencies</h2>
+
+	</br></br></br>
+	<div class="row">
+		<div class="column">
+			<a href="Transport/Air.html">
+			<!-- <img src="Transport/Air/DCA/Police/BADGE.png" height="200"> -->
+			<img id="air" src="" height="250">
+			<br>Airport Emergency Services</a><br><br>
+		</div> 
+		<div class="column">
+			<a href="Transport/Rail.html">
+			<!-- <img src="Transport/Rail/AMTRAK/BADGE.png" height="200"> -->
+			<img id="rail" src="" height="250">
+			<br>Railway Police</a><br><br>
+		</div>
+		<div class="column">
+			<a href="Transport/Port.html">
+			<!-- <img src="Transport/PORT/PAPD/BADGE.png" height="200"> -->
+			<img id="port" src="" height="250">
+			<br>Port Police</a><br><br>
+		</div>
+		<div class="column2">
+			<a href="Transport/Transit.html">
+			<!-- <img src="Transport/Transit/NJ/BADGE.png" height="200"> -->
+			<img id="transit" src="" height="250">
+			<br>Transit Police</a><br><br>
+		</div>
+		<div class="column2">
+			<!-- <a href="Transport/Bridge.html"> -->
+			<!-- <img src="Transport/Bridge/BADGE.png" height="200"> -->
+			<img id="bridge" src="" height="250">
+			<br>Other Transport Agencies</a><br><br>
+		</div>
+		
+		
+			<script>
+				function getRandomImage(folder, images) {
+				if (images.length === 0) {
+				console.error(`No images found in folder: ${folder}`);
+				return null;
+				}
+
+				const randomIndex = Math.floor(Math.random() * images.length);
+				return folder + '/' + images[randomIndex];
+				}
+
+
+				document.addEventListener('DOMContentLoaded', function() {
+				const imageConfigurations = [
+				{ id: 'air', folder: 'Transport/Port', 
+				images: [
+				'AK/ANC/BADGE2a.png',
+				'AK/ANC/BADGE2b.png',
+				'AK/ANC/BADGEa.png',
+				'AK/ANC/BADGEb.png',
+				'CA/BUR/PBADGE.png',
+				'CA/LAX/Police/BADGE.png',
+				'CA/LAX/Police/MBADGE.png',
+				'CA/LAX/Fire/BADGE.png',
+				'DCA/Fire/BADGE.png',
+				'DCA/Police/BADGE.png',
+				'DEN/BADGE.png',
+				'BADGE.png',
+				'SEA/PBADGE.png',
+				'SEA/FBADGE.png',
+				'FL/FLL/BADGE.png',
+				'FL/MCO/FBADGE.png',
+				'MSP/FBADGE.png',
+				'MSP/PBADGE.png',
+				'NY/BUF/FBADGE.png',
+				'NY/BUF/FBADGE2.png',
+				'NY/SYR/PBADGE.png',
+				'NY/PAPD/BADGE.png',
+				'DRBA.png', <!-- DE/NJ.  -->
+				] },
+				
+				{ id: 'rail', folder: 'Transport/Rail', 
+				images: [
+				'AMTRAK/BADGE.png',
+				'BNSF/BADGE.png',
+				'CN-US/BADGE.png',
+				'CP-US/BADGE.png',
+				'CSX/BADGE.png',
+				'NS/BADGE.png',
+				'NS/MBADGE.png',
+				'UP/BADGE.png',
+				'BADGE.png',
+				] },
+				
+				{ id: 'port', folder: 'Transport/Port', 
+				images: [
+				'CA/LAPP/BADGE.png',
+				'CA/LAPP/BADGE2.png',
+				'NY/PAPD/BADGE.png',
+				'SEA/PBADGE.png',
+				<!-- 'SEA/FBADGE.png', -->
+				] },
+				
+				{ id: 'bridge', folder: 'Transport/Bridge', 
+				images: [
+				'DRBA.png', <!-- DE/NJ.  -->
+				'DRPA.png', <!-- PA/NJ.  -->
+				'MD/MDTA.png',  <!-- highways and facilities throughout the state, in addition to contractual services that are provided at Baltimore–Washington International Thurgood Marshall Airport, and the Port of Baltimore.  -->
+				'TBTA.png',
+				] },
+				
+				{ id: 'transit', folder: 'Transport/Transit', 
+				images: [
+				'NY/MTA/BADGE.png',
+				'CA/BART.png',
+				'NJ/BADGE.png',
+				'WMATA/BADGE.png',
+				'NY/BNTA.png',
+				'MA/MBTA.png',
+				'TX/DART.png',
+				'TX/METRO.png',
+				'IL/METRA.png',
+				'PA/SEPTA.png',
+				'OH/RTA2.png',
+				'MD/MDTA2.png',  <!-- transit system and its passengers -->
+				] }
+				
+				];
+
+				for (let i = 0; i < imageConfigurations.length; i++) {
+				const config = imageConfigurations[i];
+				const imgElement = document.getElementById(config.id);
+
+				if (imgElement) {
+				const imageUrl = getRandomImage(config.folder, config.images);
+				if (imageUrl) {
+				imgElement.src = imageUrl;
+				} else {
+				console.log(`Could not load image for ${config.id}`);
+				}
+				} else {
+				console.error(`Element with id '${config.id}' not found.`);
+				}
+				}
+				});
+			</script>
+		
+		
+	</div>
+	
+</body>
+</html>
