@@ -37,10 +37,6 @@
 					
 				<script>
 					function getRandomImage(folder, images) {
-					if (images.length === 0) {
-					console.error(`No images found in folder: ${folder}`);
-					return null;
-					}
 
 					const randomIndex = Math.floor(Math.random() * images.length);
 					return folder + '/' + images[randomIndex];
