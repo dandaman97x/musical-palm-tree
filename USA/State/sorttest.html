@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sortable Listings</title>
+  <style>
+    .listing {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="listings">
+    <div class="listing" data-sort-value-population="5000000" data-sort-value-region="ANorth America">Listing 1 - Large Population</div>
+    <div class="listing" data-sort-value-population="1000000" data-sort-value-region="BEurope">Listing 2 - Medium Population</div>
+    <div class="listing" data-sort-value-population="50000" data-sort-value-region="CAsia">Listing 3 - Small Population</div>
+    <div class="listing" data-sort-value-population="2500000" data-sort-value-region="DNorth America">Listing 4 - Large Population</div>
+  </div>
+
+  <button id="sortByPopulation">Sort by Population</button>
+  <button id="sortByRegion">Sort by Region</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const listingsContainer = document.getElementById('listings');
+  const sortByPopulationButton = document.getElementById('sortByPopulation');
+  const sortByRegionButton = document.getElementById('sortByRegion');
+
+  let sortState = {
+    population: 'asc', // Initial sort order for population (ascending)
+    region: 'asc'      // Initial sort order for region (ascending)
+  };
+
+  function sortListings(sortType, direction) {
+    let listings = Array.from(listingsContainer.children);
+
+    if (sortType === 'population') {
+      listings.sort((a, b) => {
+        const valueA = parseInt(a.dataset.sortValuePopulation);
+        const valueB = parseInt(b.dataset.sortValuePopulation);
+
+        if (direction === 'asc') {
+          return valueA - valueB;
+        } else {
+          return valueB - valueA;
+        }
+      });
+    } else if (sortType === 'region') {
+      listings.sort((a, b) => {
+        const regionA = a.dataset.sortValueRegion.toLowerCase();
+        const regionB = b.dataset.sortValueRegion.toLowerCase();
+
+        if (direction === 'asc') {
+          return regionA.localeCompare(regionB); // Use localeCompare for string comparison
+        } else {
+          return regionB.localeCompare(regionA);
+        }
+      });
+    }
+
+    listingsContainer.innerHTML = '';
+    listings.forEach(listing => listingsContainer.appendChild(listing));
+
+    // Update the sort state
+    sortState[sortType] = direction === 'asc' ? 'desc' : 'asc';
+  }
+
+  sortByPopulationButton.addEventListener('click', () => {
+    sortListings('population', sortState.population);
+  });
+
+  sortByRegionButton.addEventListener('click', () => {
+    sortListings('region', sortState.region);
+  });
+});
+
+  </script>
+
+</body>
+</html>
