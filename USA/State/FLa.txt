@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Florida</title>
+	<!-- <p ALIGN=LEFT ><a href="../USA.html">BACK</a></p> -->
+
+		<!-- <div class="column"> -->
+			<a href="../USA.html">BACK to USA</a></div>
+		<!-- </div> -->
+		<!-- <div class="column"> -->
+			<a href="FL-2.html">EVERYTHING</a></div>
+		<!-- </div> -->
+		
+		<div class="column0">
+    <h1><img src="FL/ARMS.png" width="256"></h1><h2>Florida</h2>
+		</div>
+
+	
+  </head>
+  <body>
+	
+	<div class="column">
+		<h1>State Agencies</h1>
+
+		<div class="column2">
+			<a href="!Trooper/FHP.html"><img src="!Trooper/FHP/!BADGE.png" height="200"><br>Florida Highway Patrol</a></br>
+		</div>
+		
+		<div class="column2">
+			<img src="!Bureau/FL/LOGO.png" height="200"><br>Florida Department of Law Enforcement</br>
+		</div>
+		
+		<div class="column2">
+			<img src="!Wildlife/FL/LOGO.png" height="200"><br>Florida Fish and Wildlife Conservation Commission</br>
+		</div>
+		
+		<div class="column2">
+			<img src="!Environment/FL/LOGO.png" height="200"><br>Florida Department of Environmenmental Protection</br>
+		</div>
+		<div class="column2">
+			<img src="!Environment/FL/Forest.png" height="200"><br>Florida Forest Service</br>
+		</div>
+		
+		<div class="column2">
+			<a href="FL.html"><img src="!Sheriffs/FL/BADGE.png" height="200"><br>Florida Sheriffs Association</a></br>
+		</div>
+		
+	</div>
+	
+	<div class="column23">
+	<div class="row">
+		<h1>Counties</h1>
+		
+	  <br>
+		<button id="sortByPopulation">Sort by Population</button>
+		<button id="sortByCounty">Sort by County</button>
+	  </br>
+			
+	<div id="listings">
+	
+		<div class="column4" data-sort-value-population="2838000" data-sort-value-county="Miami">
+			<a href="FL/Miami.html"><img src="FL/Miami/LOGO.png" height="100"><br>Miami-Dade County</a><br>
+			<div class="column2">
+				<img src="FL/Miami/County/Sheriff/BADGE.png" height="80"><br>Miami-Dade County Sheriff's Office</a><br>
+			</div>
+			<div class="column2">
+				<img src="FL/Miami/County/Fire/BADGE.png" height="80"><br>Miami-Dade County<br>Fire Rescue</a><br>
+			</div>
+		</div>
+		</div>
+		
+		<div class="column4" data-sort-value-population="2037000" data-sort-value-county="Broward">
+			<a href="FL/Broward.html"><img src="FL/Broward/LOGO.png" height="100"><br>Broward County</a><br>
+			<div class="column2">
+				<img src="FL/Broward/County/Sheriff/BADGE.png" height="80"><br>Broward County<br>Sheriff's Office</a><br>
+			</div>
+			<div class="column2">
+				<img src="FL/Broward/County/Fire/BADGE.png" height="80"><br>Broward County<br>Sheriff's Fire Rescue</a><br>
+			</div>
+		</div>		
+		</div>		
+		
+
+		<div class="column4" data-sort-value-population="1581000" data-sort-value-county="Hillsborough">
+			<img src="FL/Hillsborough/LOGO.png" height="100"><br>Hillsborough County<br>
+			<div class="column2">
+				<img src="FL/Hillsborough/County/Sheriff/BADGE.png" height="80"><br>Hillsborough County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		</div>
+		
+		<div class="column4" data-sort-value-population="1582000" data-sort-value-county="Palm Beach">
+			<img src="FL/Palm Beach/SEAL.png" height="100"><br>Palm Beach County<br>
+			<div class="column2">
+				<img src="FL/Palm Beach/County/Sheriff/BADGE.png" height="80"><br>Palm Beach County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		</div>
+		
+
+	</div>		
+	</div>		
+	
+		<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const listingsContainer = document.getElementById('listings');
+  const sortByPopulationButton = document.getElementById('sortByPopulation');
+  const sortByCountyButton = document.getElementById('sortByCounty');
+
+  let sortState = {
+    population: 'asc', // Initial sort order for population (ascending)
+    county: 'asc'      // Initial sort order for county (ascending)
+  };
+
+  function sortListings(sortType, direction) {
+    let listings = Array.from(listingsContainer.children);
+
+    if (sortType === 'population') {
+      listings.sort((a, b) => {
+        const valueA = parseInt(a.dataset.sortValuePopulation);
+        const valueB = parseInt(b.dataset.sortValuePopulation);
+
+        if (direction === 'asc') {
+          return valueA - valueB;
+        } else {
+          return valueB - valueA;
+        }
+      });
+    } else if (sortType === 'county') {
+      listings.sort((a, b) => {
+        const countyA = a.dataset.sortValueCounty.toLowerCase();
+        const countyB = b.dataset.sortValueCounty.toLowerCase();
+
+        if (direction === 'asc') {
+          return countyA.localeCompare(countyB); // Use localeCompare for string comparison
+        } else {
+          return countyB.localeCompare(countyA);
+        }
+      });
+    }
+
+    listingsContainer.innerHTML = '';
+    listings.forEach(listing => listingsContainer.appendChild(listing));
+
+    // Update the sort state
+    sortState[sortType] = direction === 'asc' ? 'desc' : 'asc';
+  }
+
+  sortByPopulationButton.addEventListener('click', () => {
+    sortListings('population', sortState.population);
+  });
+
+  sortByCountyButton.addEventListener('click', () => {
+    sortListings('county', sortState.county);
+  });
+});
+
+  </script>
+  
+	<div class="row">
+		
+		<div class="column4">
+			<img src="FL/Orange/LOGO.png" height="100"><br>Orange County<br>		
+			<div class="column2">
+				<img src="FL/Orange/County/Sheriff/BADGE.png" height="80"><br>Orange County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		
+
+		<div class="column4">
+			<img src="FL/Duval/SEAL.png" height="100"><br>
+				City of Jacksonville<br>and Duval County<br>
+			<div class="column">
+				<img src="FL/Duval/County/Sheriff/BADGE.png" height="80"><br>Jacksonville Sheriff's Office<br>
+			</div>
+		</div>
+
+
+		<div class="column4">
+			<img src="FL/Pinellas/LOGO.png" height="100"><br>Pinellas County<br>
+			<div class="column2">
+				<img src="FL/Pinellas/County/Sheriff/BADGE.png" height="80"><br>Pinellas County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Lee/LOGO.png" height="100"><br>Lee County<br>
+			<div class="column2">
+				<img src="FL/Lee/County/Sheriff/BADGE.png" height="80"><br>Lee County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+	</div>		
+	<div class="row">
+		
+		<div class="column4">
+			<img src="FL/Polk/LOGO.png" height="100"><br>Polk County<br>
+			<div class="column2">
+				<img src="FL/Polk/County/Sheriff/BADGE.png" height="80"><br>Polk County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Brevard/LOGO.png" height="100"><br>Brevard County<br>
+			<div class="column2">
+				<img src="FL/Brevard/County/Sheriff/BADGE.png" height="80"><br>Brevard County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Pasco/LOGO.png" height="100"><br>Pasco County<br>
+			<div class="column2">
+				<img src="FL/Pasco/County/Sheriff/BADGE.png" height="80"><br>Pasco County<br>Sheriff's Office<br>
+			</div>
+		</div>
+			
+		
+		<div class="column4">
+			<img src="FL/Volusia/LOGOW.png" height="100"><br>Volusia County<br>
+			<div class="column2">
+				<img src="FL/Volusia/County/Sheriff/BADGE.png" height="80"><br>Volusia County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+	</div>		
+	</div>		
+	<div class="column0">
+	<div class="row">
+		
+		
+		<div class="column4">
+			<img src="FL/Seminole/LOGO.png" height="100"><br>Seminole County<br>
+			<div class="column2">
+				<img src="FL/Seminole/SheriffM.png" height="80"><br>Seminole County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/Sarasota/LOGO.png" height="100"><br>Sarasota County<br>
+			<div class="column2">
+				<img src="FL/Sarasota/County/Sheriff/BADGE.png" height="80"><br>Sarasota County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/Manatee/LOGO.png" height="100"><br>Manatee County<br>
+			<div class="column2">
+				<img src="FL/Manatee/County/Sheriff/BADGE.png" height="80"><br>Manatee County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/Osceola/LOGO2.png" height="100"><br>Osceola County<br>
+			<div class="column2">
+				<img src="FL/Osceola/County/Sheriff/BADGE.png" height="80"><br>Osceola County<br>Sheriff's Office<br>
+			</div>
+			<div class="column2">
+				<img src="FL/Osceola/Fire.png" height="80"><br>Osceola County<br>Fire/Rescue<br>
+			</div>
+		</div>
+		
+	</div>		
+	<div class="row">
+		
+
+		<div class="column4">
+			<img src="FL/Lake/LOGO.png" height="100"><br>Lake County<br>
+			<div class="column2">
+				<img src="FL/Lake/County/Sheriff/BADGE.png" height="80"><br>Lake County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Marion/LOGO.png" height="100"><br>Marion County<br>
+			<div class="column2">
+				<img src="FL/Marion/Sheriff/BADGE.png" height="80"><br>Marion County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/Collier/LOGO.png" height="100"><br>Collier County<br>
+			<div class="column2">
+				<img src="FL/Collier/County/Sheriff/BADGE.png" height="80"><br>Collier County Sheriff's Office<br>
+			</div>
+			<!-- <div class="column"> -->
+				<!-- <img src="FL/Collier/Fire.png" height="80"><br>Collier County Sheriff's Office<br> -->
+			<!-- </div> -->
+			<div class="column2">
+				<img src="FL/Collier/EMS.png" height="80"><br>Collier County EMS<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/St.Lucie/LOGO.png" height="100"><br>St. Lucie County<br>
+			<div class="column2">
+				<img src="FL/St.Lucie/County/Sheriff/BADGE.png" height="80"><br>St. Lucie County<br>Sheriff's Office<br>
+			</div>
+			<div class="column2">
+				<img src="FL/St.Lucie/Fire.png" height="80"><br>St. Lucie County<br>Fire District<br>
+			</div>
+		</div>
+
+	</div>		
+	<div class="row">
+		
+		
+		<div class="column4">
+			<img src="FL/Escambia/SEAL.png" height="100"><br>Escambia County<br>
+			<div class="column">
+				<img src="FL/Escambia/County/Sheriff/BADGE.png" height="80"><br>Escambia County<br>Sheriff's Office<br>
+			</div>
+			<div class="column">
+				<img src="FL/Escambia/Fire.png" height="80"><br>Escambia County<br>Fire-Rescue<br>
+			</div>
+			<div class="column">
+				<img src="FL/Escambia/EMS.png" height="80"><br>Escambia County<br>EMS<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/St.Johns/LOGO.png" height="100"><br>St. Johns County<br>
+			<div class="column2">
+				<img src="FL/St.Johns/Fire.png" height="80"><br>St. Johns County<br>Sheriff's Office<br>
+			</div>
+			<div class="column2">
+				<img src="FL/St.Johns/County/Sheriff/BADGE.png" height="80"><br>St. Johns County<br>Fire Rescue<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/Leon/SEAL.png" height="100"><br>Leon County<br>
+			<div class="column2">
+				<img src="FL/Leon/County/Sheriff/BADGE.png" height="80"><br>Leon County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/Alachua/LOGO.png" height="100"><br>Alachua County<br>
+			<div class="column2">
+				<img src="FL/Alachua/County/Sheriff/BADGE.png" height="80"><br>Alachua County<br>Sheriff's Office<br>
+			</div>
+			<div class="column2">
+				<img src="FL/Alachua/Fire.png" height="80"><br>Alachua County<br>Fire Rescue<br>
+			</div>
+		</div>
+
+	</div>		
+	<div class="row">
+		
+		
+		<div class="column4">
+			<img src="FL/Clay/LOGO.png" height="100"><br>Clay County<br>
+			<div class="column2">
+				<img src="FL/Clay/County/Sheriff/BADGE.png" height="80"><br>Clay County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Okaloosa/LOGO.png" height="100"><br>Okaloosa County<br>
+			<div class="column2">
+				<img src="FL/Okaloosa/County/Sheriff/BADGE.png" height="80"><br>Okaloosa County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Hernando/LOGO.png" height="100"><br>Hernando County<br>
+			<div class="column2">
+				<img src="FL/Hernando/County/Sheriff/BADGE.png" height="80"><br>Hernando County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/Charlotte/LOGO.png" height="100"><br>Charlotte County<br>
+			<div class="column2">
+				<img src="FL/Charlotte/County/Sheriff/BADGE.png" height="80"><br>Charlotte County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+	</div>		
+	<div class="row">
+		
+		
+		<div class="column4">
+			<img src="FL/Santa Rosa/SEAL.png" height="100"><br>Santa Rosa County<br>
+			<div class="column2">
+				<img src="FL/Santa Rosa/County/Sheriff/BADGE.png" height="80"><br>Santa Rosa County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Bay/SEAL.png" height="100"><br>Bay County<br>
+			<div class="column2">
+				<img src="FL/Bay/County/Sheriff/BADGE.png" height="80"><br>Bay County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/Indian River/LOGO.png" height="100"><br>Indian River County<br>
+			<div class="column2">
+				<img src="FL/Indian River/County/Sheriff/BADGE.png" height="80"><br>Indian River County Sheriff's Office<br>
+			</div>
+			<div class="column2">
+				<img src="FL/Indian River/Fire.png" height="80"><br>Indian River County Fire Rescue<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/Citrus/SEAL.png" height="100"><br>Citrus County<br>
+			<div class="column2">
+				<img src="FL/Citrus/County/Sheriff/BADGE.png" height="80"><br>Citrus County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+	</div>		
+	<div class="row">
+		
+		
+		<div class="column4">
+			<img src="FL/Martin/SEAL.png" height="100"><br>Martin County<br>
+			<div class="column2">
+				<img src="FL/Martin/County/Sheriff/BADGE.png" height="80"><br>Martin County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Sumter/LOGO.png" height="100"><br>Sumter County<br>
+			<div class="column2">
+				<img src="FL/Sumter/County/Sheriff/BADGE.png" height="80"><br>Sumter County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/Flagler/LOGO.png" height="100"><br>Flagler County<br>
+			<div class="column2">
+				<img src="FL/Flagler/Sheriff/BADGE.png" height="80"><br>Flagler County<br>Sheriff's Office<br>
+			</div>		
+		</div>		
+		
+		<div class="column4">
+			<img src="FL/Highlands/SEAL.png" height="100"><br>Highlands County<br>
+			<div class="column2">
+				<img src="FL/Highlands/County/Sheriff/BADGE.png" height="80"><br>Highlands County<br>Sheriff's Office<br>
+			</div>		
+			<div class="column2">
+				<img src="FL/Highlands/Fire.png" height="80"><br>Highlands County<br>Fire Rescue<br>
+			</div>		
+		</div>		
+
+	</div>		
+	<div class="row">
+		
+		
+		<div class="column4">
+			<img src="FL/Nassau/LOGO.png" height="100"><br>Nassau County<br>
+			<div class="column2">
+				<img src="FL/Nassau/County/Sheriff/BADGE.png" height="80"><br>Nassau County<br>Sheriff's Office<br>
+			</div>	
+		</div>		
+
+		<div class="column4">
+			<img src="FL/Walton/SEAL.png" height="100"><br>Walton County<br>
+			<div class="column2">
+				<img src="FL/Walton/County/Sheriff/BADGE.png" height="80"><br>Walton County<br>Sheriff's Office<br>
+			</div>	
+			<div class="column2">
+				<img src="FL/Walton/Fire.png" height="80"><br>Walton County<br>Fire Rescue<br>
+			</div>	
+		</div>		
+		
+		<div class="column4">
+			<img src="FL/Monroe/LOGO.png" height="100"><br>Monroe County<br>
+			<div class="column2">
+				<img src="FL/Monroe/SheriffM.png" height="80"><br>Monroe County<br>Sheriff's Office<br>
+			</div>
+		</div>		
+
+		<div class="column4">
+			<img src="FL/Putnam/SEAL.png" height="100"><br>Putnam County<br>
+			<div class="column2">
+				<img src="FL/Putnam/County/Sheriff/BADGE.png" height="80"><br>Putnam County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+	</div>		
+	<div class="row">
+		
+
+		<div class="column4">
+			<img src="FL/Columbia/LOGO.png" height="100"><br>Columbia County<br>
+			<div class="column2">
+				<img src="FL/Columbia/County/Sheriff/BADGE.png" height="80"><br>Columbia County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Jackson/LOGO.png" height="100"><br>Jackson County<br>
+			<div class="column2">
+				<img src="FL/Jackson/County/Sheriff/BADGE.png" height="80"><br>Jackson County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Levy/LOGO.png" height="100"><br>Levy County<br>
+			<div class="column2">
+				<img src="FL/Levy/County/Sheriff/BADGE.png" height="80"><br>Levy County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Suwanee/LOGO.png" height="100"><br>Suwanee County<br>
+			<div class="column2">
+				<img src="FL/Suwanee/County/Sheriff/BADGE.png" height="80"><br>Suwanee County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+	</div>		
+	<div class="row">
+
+		<div class="column4">
+			<img src="FL/Gadsden/LOGO.png" height="100"><br>Gadsden County<br>
+			<div class="column2">
+				<img src="FL/Gadsden/County/Sheriff/BADGE.png" height="80"><br>Gadsden County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Hendry/SEAL.png" height="100"><br>Hendry County<br>
+			<div class="column2">
+				<img src="FL/Hendry/County/Sheriff/BADGE.png" height="80"><br>Hendry County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Okeechobee/SEAL.png" height="100"><br>Okeechobee County<br>
+			<div class="column2">
+				<img src="FL/Okeechobee/County/Sheriff/BADGE.png" height="80"><br>Okeechobee County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Wakulla/LOGOW2.png" height="100"><br>Wakulla County<br>
+			<div class="column2">
+				<img src="FL/Wakulla/County/Sheriff/BADGE.png" height="80"><br>Wakulla County<br>Sheriff's Office<br>
+			</div>
+			<div class="column2">
+				<img src="FL/Wakulla/Fire.png" height="80"><br>Wakulla County<br>Fire & EMS<br>
+			</div>
+		</div>
+
+	</div>		
+	<div class="row">
+
+		<div class="column4">
+			<img src="FL/DeSoto/LOGO.png" height="100"><br>DeSoto County<br>
+			<div class="column2">
+				<img src="FL/DeSoto/County/Sheriff/BADGE.png" height="80"><br>DeSoto County<br>Sheriff's Office<br>
+			</div>
+			<div class="column2">
+				<img src="FL/DeSoto/Fire.png" height="80"><br>DeSoto County<br>Fire & Rescue<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Baker/SEAL.png" height="100"><br>Baker County<br>
+			<div class="column2">
+				<img src="FL/Baker/County/Sheriff/BADGE.png" height="80"><br>Baker County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/Bradford/SEAL.png" height="100"><br>Bradford County<br>
+			<div class="column2">
+				<img src="FL/Bradford/County/Sheriff/BADGE.png" height="80"><br>Bradford County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/Hardee/LOGO.png" height="100"><br>Hardee County<br>
+			<div class="column2">
+				<img src="FL/Hardee/County/Sheriff/BADGE.png" height="80"><br>Hardee County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+	</div>		
+	<div class="row">
+		
+		<div class="column4">
+			<img src="FL/Washington/SEAL.png" height="100"><br>Washington County<br>
+			<div class="column2">
+				<img src="FL/Washington/County/Sheriff/BADGE.png" height="80"><br>Washington County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Taylor/SEAL.png" height="100"><br>Taylor County<br>
+			<div class="column2">
+				<img src="FL/Taylor/SheriffM.png" height="80"><br>Taylor County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/Holmes/SEAL.png" height="100"><br>Holmes County<br>
+			<div class="column2">
+				<img src="FL/Holmes/County/Sheriff/BADGE.png" height="80"><br>Holmes County<br>Sheriff's Office<br>
+			</div>
+		</div>
+	
+		<div class="column4">
+			<img src="FL/Gilchrist/LOGO.png" height="100"><br>Gilchrist County<br>
+			<div class="column2">
+				<img src="FL/Gilchrist/County/Sheriff/BADGE.png" height="80"><br>Gilchrist County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+	</div>		
+	<div class="row">
+		
+		<div class="column4">
+			<img src="FL/Madison/LOGO.png" height="100"><br>Madison County<br>
+			<div class="column2">
+				<img src="FL/Madison/County/Sheriff/BADGE.png" height="80"><br>Madison County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Dixie/SEAL.png" height="100"><br>Dixie County<br>
+			<div class="column2">
+				<img src="FL/Dixie/County/Sheriff/BADGE.png" height="80"><br>Dixie County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/Gulf/LOGO.png" height="100"><br>Gulf County<br>
+			<div class="column2">
+				<img src="FL/Gulf/County/Sheriff/BADGE.png" height="80"><br>Gulf County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/Union/LOGO.png" height="100"><br>Union County<br>
+			<div class="column2">
+				<img src="FL/Union/County/Sheriff/BADGE.png" height="80"><br>Union County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+	</div>		
+	<div class="row">
+		
+		<div class="column4">
+			<img src="FL/Jefferson/LOGO.png" height="100"><br>Jefferson County<br>
+			<div class="column2">
+				<img src="FL/Jefferson/County/Sheriff/BADGE.png" height="80"><br>Jefferson County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Hamilton/SEAL.png" height="100"><br>Hamilton County<br>
+			<div class="column2">
+				<img src="FL/Hamilton/County/Sheriff/BADGE.png" height="80"><br>Hamilton County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+		<div class="column4">
+			<img src="FL/Calhoun/SEAL.png" height="100"><br>Calhoun County<br>
+			<div class="column2">
+				<img src="FL/Calhoun/County/Sheriff/BADGE.png" height="80"><br>Calhoun County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/Glades/LOGO.png" height="100"><br>Glades County<br>
+			<div class="column2">
+				<img src="FL/Glades/County/Sheriff/BADGE.png" height="80"><br>Glades County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+	</div>		
+	<div class="row">
+		
+		<div class="column4">
+			<img src="FL/Franklin/LOGO.png" height="100"><br>Franklin County<br>
+			<div class="column2">
+				<img src="FL/Franklin/County/Sheriff/BADGE.png" height="80"><br>Franklin County<br>Sheriff's Office<br>
+			</div>
+		</div>
+		
+		<div class="column4">
+			<img src="FL/Lafayette/LOGO.png" height="100"><br>Lafayette County<br>
+			<div class="column2">
+				<img src="FL/Lafayette/County/Sheriff/BADGE.png" height="80"><br>Lafayette County<br>Sheriff's Office<br>
+			</div>
+		</div>
+	
+		<div class="column4">
+			<img src="FL/Liberty/LOGO.png" height="100"><br>Liberty County<br>
+			<div class="column2">
+				<img src="FL/Liberty/County/Sheriff/BADGE.png" height="80"><br>Liberty County<br>Sheriff's Office<br>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>
