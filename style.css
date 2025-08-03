@@ -168,6 +168,34 @@ background-position: center;
 background-size: cover;
 }
 
+/* State Police */
+.fhpheader{
+background-image: url("USA/State/!Trooper/FHP/FHPSTRIPE2.png");
+background-repeat: no-repeat;	
+background-position: center;
+background-size: cover;
+}
+.njspheader{
+background-image: url("USA/State/!Trooper/NJSP/NJSPSTRIPE.png");
+background-repeat: no-repeat;	
+background-position: center;
+background-size: cover;
+}
+.nyspheader{
+background-image: url("USA/State/!Trooper/NYSP/NYSPSTRIPE.png");
+background-repeat: no-repeat;	
+background-position: center;
+background-size: cover;
+}
+
+/* Other Agencies (US) */
+.vcsoheader{
+background-image: url("USA/State/CA/Ventura/County/Sheriff/VCSOSTRIPE.png");
+background-repeat: no-repeat;	
+background-position: center;
+background-size: cover;
+}
+
 /* UK */
 /* POLICE */
 .ukpolheader{
