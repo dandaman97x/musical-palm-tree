@@ -197,9 +197,20 @@ background-size: cover;
 }
 
 /* UK */
-/* POLICE */
 .ukpolheader{
-background-image: url("../ROW/UK/PoliceStripe.png");
+background-image: url("UK/UK/PoliceStripe.png");
+background-repeat: no-repeat;	
+background-position: center;
+background-size: cover;
+}
+.ukfireheader{
+background-image: url("UK/UK/FireStripe.png");
+background-repeat: no-repeat;	
+background-position: center;
+background-size: cover;
+}
+.ukambheader{
+background-image: url("UK/UK/EMSStripe.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
