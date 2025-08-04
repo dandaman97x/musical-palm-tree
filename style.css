@@ -121,6 +121,10 @@ background-image: url("CAN/Provinces/ON/Toronto/tpsstripe.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
+color:black;
+}
+.topoliceheader a {
+    color: black;  /* Link color */
 }
 
 
