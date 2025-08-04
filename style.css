@@ -198,6 +198,10 @@ background-image: url("USA/State/CA/Ventura/County/Sheriff/VCSOSTRIPE.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
+color: black;  
+}
+.vcsoheader a {
+    color: black;  /* Link color */
 }
 
 /* UK */
