@@ -2,83 +2,103 @@ body {
 text-align: center;
 background-color: #252525;
 color:white;
-font-family: Helvetica, sans-serif;
+font-family: Verdana, sans-serif;
 }
 
 a{color: white}
 
-
 .column0 {
   float: left;
   width: 100%;
+  margin-bottom:20px;
 }
 .column2 {
   float: left;
   width: 50%;
+  margin-bottom:20px;
 }
 .column {
   float: left;
   width: 33.33%;
+  margin-bottom:20px;
 }
 .column23 {
   float: left;
   width: 66.66%;
+  margin-bottom:20px;
 }
 .column4 {
   float: left;
   width: 25%;
+  margin-bottom:20px;
 }
 .column34 {
   float: left;
   width: 75%;
+  margin-bottom:20px;
 }
 .column5 {
   float: left;
   width: 20%;
+  margin-bottom:20px;
 }
 .column45 {
   float: left;
   width: 80%;
+  margin-bottom:20px;
 }
 .column6
 {
   float: left;
   width: 16.66%;
+  margin-bottom:20px;
 }
 .column8
 {
   float: left;
   width: 12.5%;
+  margin-bottom:20px;
 }
 .column10 {
   float: left;
   width: 10%;
+  margin-bottom:20px;
 }
 
 .column0g {
   float: left;
   width: 100%;
+  margin-bottom:20px;
   filter: saturate(0%);
 }
 .column2g {
   float: left;
   width: 50%;
+  margin-bottom:20px;
   filter: saturate(0%);
 }
 .columng {
   float: left;
   width: 33.33%;
+  margin-bottom:20px;
   filter: saturate(0%);
 }
 .column4g {
   float: left;
   width: 25%;
+  margin-bottom:20px;
   filter: saturate(0%);
 }
 .column5g {
   float: left;
   width: 20%;
+  margin-bottom:20px;
   filter: saturate(0%);
+}
+
+.county-info {
+    transition: height 3s ease; /* Optional smooth transition */
+    height: 0;  /* Initial height is zero */
 }
 
 /* CANADA */
