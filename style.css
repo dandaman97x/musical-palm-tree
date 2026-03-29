@@ -103,13 +103,13 @@ a{color: white}
 
 /* CANADA */
 .cbsaheader{
-background-image: url("NA/CAN/FED/CBSA/CBSASTRIPE.png");
+background-image: url("AMER/CAN/FED/CBSA/CBSASTRIPE.png");
 background-repeat: repeat;	
 background-position: center;
 background-size: cover;
 }
 .rcmpheader1{
-background-image: url("NA/CAN/rcmp/rcmpstripe.png");
+background-image: url("AMER/CAN/rcmp/rcmpstripe.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
@@ -117,27 +117,27 @@ background-size: cover;
   width: 33.33%;
 }
 .rcmpheader{
-background-image: url("NA/CAN/fed/rcmp/rcmpstripe.png");
+background-image: url("AMER/CAN/fed/rcmp/rcmpstripe.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
 }
 /* ONTARIO*/
 .oppheader{
-background-image: url("NA/CAN/Provinces/ON/OPP/oppstripe.png");
+background-image: url("AMER/CAN/Provinces/ON/OPP/oppstripe.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
 }
 /* TORONTO */
 .tofireheader{
-background-image: url("NA/CAN/Provinces/ON/Toronto/tfsstripe.png");
+background-image: url("AMER/CAN/Provinces/ON/Toronto/tfsstripe.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
 }
 .topoliceheader{
-background-image: url("NA/CAN/Provinces/ON/Toronto/tpsstripe.png");
+background-image: url("AMER/CAN/Provinces/ON/Toronto/tpsstripe.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
@@ -152,15 +152,15 @@ color:black;
 /* USA*/
 /* HOMELAND */
 .dhsheader{
-background-image: url("NA/USA/FED/DHS/DHSStripe.png");
+background-image: url("AMER/USA/FED/DHS/DHSStripe.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
 }
 /* CUSTOMS */
 .cbpheader{
-/* background-image: url("NA/USA/FED/DHS/CBP/FO/CBPStripe.png"); */
-background-image: url("NA/USA/FED/DHS/CBP/FO/CBPStripe2.png");
+/* background-image: url("AMER/USA/FED/DHS/CBP/FO/CBPStripe.png"); */
+background-image: url("AMER/USA/FED/DHS/CBP/FO/CBPStripe2.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
@@ -168,8 +168,8 @@ background-size: cover;
 /* width: 50%; */
 }
 .usbpheader{
-/* background-image: url("NA/USA/FED/DHS/CBP/USBP/USBPStripe.png"); */
-background-image: url("NA/USA/FED/DHS/CBP/USBP/USBPStripe2.png");
+/* background-image: url("AMER/USA/FED/DHS/CBP/USBP/USBPStripe.png"); */
+background-image: url("AMER/USA/FED/DHS/CBP/USBP/USBPStripe2.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
@@ -177,8 +177,8 @@ background-size: cover;
 /* width: 50%; */
 }
 .amoheader{
-/* background-image: url("NA/USA/FED/DHS/CBP/Air/AMOStripe.png"); */
-background-image: url("NA/USA/FED/DHS/CBP/Air/AMOStripe2.png");
+/* background-image: url("AMER/USA/FED/DHS/CBP/Air/AMOStripe.png"); */
+background-image: url("AMER/USA/FED/DHS/CBP/Air/AMOStripe2.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
@@ -186,7 +186,7 @@ background-size: cover;
 /* width: 50%; */
 }
 .uscgheader{
-background-image: url("NA/USA/FED/DHS/USCG/USCGStripe.png");
+background-image: url("AMER/USA/FED/DHS/USCG/USCGStripe.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
@@ -194,19 +194,19 @@ background-size: cover;
 
 /* State Police */
 .fhpheader{
-background-image: url("NA/USA/State/!Trooper/FHP/FHPSTRIPE2.png");
+background-image: url("AMER/USA/State/!Trooper/FHP/FHPSTRIPE2.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
 }
 .njspheader{
-background-image: url("NA/USA/State/!Trooper/NJSP/NJSPSTRIPE.png");
+background-image: url("AMER/USA/State/!Trooper/NJSP/NJSPSTRIPE.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
 }
 .nyspheader{
-background-image: url("NA/USA/State/!Trooper/NYSP/NYSPSTRIPE.png");
+background-image: url("AMER/USA/State/!Trooper/NYSP/NYSPSTRIPE.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
@@ -214,7 +214,7 @@ background-size: cover;
 
 /* Other Agencies (US) */
 .vcsoheader{
-background-image: url("NA/USA/State/CA/Ventura/County/Sheriff/VCSOSTRIPE.png");
+background-image: url("AMER/USA/State/CA/Ventura/County/Sheriff/VCSOSTRIPE.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
@@ -226,7 +226,7 @@ color: black;
 
 /* UK */
 .ukpolheader{
-background-image: url("EURO/UK/UK/PoliceStripe.png");
+background-image: url("EURO/UK/PoliceStripe.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
@@ -236,7 +236,7 @@ color: black;
 color: black;
 }*/
 .ukfireheader{
-background-image: url("EURO/UK/UK/FireStripe.png");
+background-image: url("EURO/UK/FireStripe.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
@@ -246,7 +246,7 @@ color: black;
 color: black;
 }*/
 .ukambheader{
-background-image: url("EURO/UK/UK/EMSStripe.png");
+background-image: url("EURO/UK/EMSStripe.png");
 background-repeat: no-repeat;	
 background-position: center;
 background-size: cover;
